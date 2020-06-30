@@ -1,0 +1,21 @@
+* gate A test
+
+.option scale=0.12u
+
+.include gateA.spice
+.include tsmc_cmos025
+
+Vcc vdd gnd 1
+
+Vb bNotForA gnd PWL(0 0 5N 0 5.1N 1 10N 1 10.1N 0 15N 0 15.1N 1 20N 1 20.1N 0 25N 0)
+Vc cNotForA gnd PWL(0 0 15N 0 15.1N 1 20N 1 20.1N 0 25N 0)
+Vx xNotForA gnd PWL(0 0 15N 0 15.1N 1 20N 1 20.1N 0 25N 0 25.1N 1 30N 1 30.1N 0)
+
+.TRAN 1N  40N
+
+* plot v(bnotfora)+3.6 v(cnotfora)+2.4 v(xnotfora)+1.2 v(agateout)
+
+.OPTIONS TEMP=25 reltol = 1e-6 
+
+.END
+

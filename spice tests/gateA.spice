@@ -1,0 +1,31 @@
+* SPICE3 file created from gateA.ext - technology: scmos
+
+.option scale=0.12u
+
+M1000 a_86_63# xNotForA aGateOut Vdd pfet w=10 l=2
++  ad=60 pd=32 as=50 ps=30
+M1001 a_94_63# cNotForA a_86_63# Vdd pfet w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1002 Vdd bNotForA a_94_63# Vdd pfet w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1003 GND xNotForA aGateOut Gnd nfet w=5 l=2
++  ad=55 pd=42 as=55 ps=42
+M1004 aGateOut cNotForA GND Gnd nfet w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 GND bNotForA aGateOut Gnd nfet w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 Vdd bNotForA 0.1fF
+C1 xNotForA cNotForA 0.1fF
+C2 Vdd aGateOut 0.1fF
+C3 xNotForA bNotForA 0.1fF
+C4 xNotForA aGateOut 0.2fF
+C5 cNotForA bNotForA 0.1fF
+C6 cNotForA aGateOut 0.0fF
+C7 bNotForA aGateOut 0.0fF
+C8 Vdd xNotForA 0.2fF
+C9 Vdd cNotForA 0.1fF
+C10 aGateOut gnd 0.4fF
+C11 bNotForA gnd 0.2fF
+C12 cNotForA gnd 0.4fF
+C13 xNotForA gnd 0.2fF
+C14 Vdd gnd 1.0fF

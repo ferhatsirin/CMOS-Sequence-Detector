@@ -1,0 +1,23 @@
+* gate B test
+
+.option scale=0.12u
+
+.include gateB.spice
+.include tsmc_cmos025
+
+Vcc vdd gnd 1
+
+Vb bNotForB gnd PWL(0 0 5N 0 5.1N 1 25N 1 25.1N 0 30N 0 30.1N 1 40N 1)
+Vc cForB gnd PWL(0 0 10N 0 10.1N 1 20N 1 20.1N 0 30N 0 30.1N 1 40N 1)
+Vnotx xNotForB gnd PWL(0 0 10N 0 10.1N 1 15N 1 15.1N 0 35N 0 35.1N 1 40N 1)
+Vcnot cNotForB gnd PWL(0 1 10N 1 10.1N 0 20N 0 20.1N 1 30N 1 30.1N 0 40N 0)
+Vx xforB gnd PWL(0 1 10N 1 10.1N 0 15N 0 15.1N 1 35N 1 35.1N 0 40N 0)
+
+.TRAN 1N  45N
+
+*  plot v(bnotforb)+6 v(cforb)+4.8 v(xnotforb)+3.6 v(cnotforb)+2.4 v(xforb)+1.2 v(bgateout)
+
+.OPTIONS TEMP=25 reltol = 1e-6 
+
+.END
+

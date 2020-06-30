@@ -1,0 +1,21 @@
+* gate C test
+
+.option scale=0.12u
+
+.include gateC.spice
+.include tsmc_cmos025
+
+Vcc vdd gnd 1
+
+Vb bForC gnd PWL(0 1 10N 1 10.1N 0 15N 0 15.1N 1 30N 1 30.1N 0 40N 0)
+Vc cForC gnd PWL(0 0 5N 0 5.1N 1 25N 1 25.1N 0 40N 0)
+Vnotx xNotForC gnd PWL(0 0 15N 0 15.1N 1 20N 1 20.1N 0 30N 0 30.1N 1 35N 1 35.1N 0 40N 0)
+
+.TRAN 1N  45N
+
+*  plot v(bforc)+3.6 v(cforc)+2.4 v(xnotforc)+1.2 v(cgateout)
+
+.OPTIONS TEMP=25 reltol = 1e-6 
+
+.END
+

@@ -1,0 +1,52 @@
+* SPICE3 file created from gateB.ext - technology: scmos
+
+.option scale=0.12u
+
+M1000 a_91_297# bNotForB Vdd Vdd pfet w=10 l=2
++  ad=60 pd=32 as=100 ps=60
+M1001 a_99_297# cForB a_91_297# Vdd pfet w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1002 bGateOut xNotForB a_99_297# Vdd pfet w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1003 a_115_297# xForB bGateOut Vdd pfet w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1004 Vdd cNotForB a_115_297# Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 a_91_252# bNotForB GND Gnd nfet w=5 l=2
++  ad=85 pd=64 as=151 ps=138
+M1006 GND cForB a_91_252# Gnd nfet w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 a_91_252# xNotForB GND Gnd nfet w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 bGateOut xForB a_91_252# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1009 a_91_252# cNotForB bGateOut Gnd nfet w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 cForB xNotForB 0.5fF
+C1 bNotForB xForB 0.2fF
+C2 xForB a_91_252# 0.0fF
+C3 cForB xForB 0.0fF
+C4 Vdd bGateOut 0.1fF
+C5 cNotForB bGateOut 0.1fF
+C6 Vdd cNotForB 0.2fF
+C7 Vdd bNotForB 0.1fF
+C8 bGateOut a_91_252# 0.3fF
+C9 xNotForB xForB 0.7fF
+C10 Vdd cForB 0.2fF
+C11 cNotForB a_91_252# 0.0fF
+C12 bNotForB cForB 0.2fF
+C13 cForB a_91_252# 0.0fF
+C14 Vdd xNotForB 0.1fF
+C15 xForB bGateOut 0.1fF
+C16 Vdd xForB 0.1fF
+C17 bNotForB xNotForB 0.0fF
+C18 cNotForB xForB 0.2fF
+C19 xNotForB a_91_252# 0.0fF
+C20 a_91_252# gnd 0.7fF
+C21 bGateOut gnd 0.2fF
+C22 xForB gnd 0.5fF
+C23 xNotForB gnd 0.5fF
+C24 cForB gnd 0.4fF
+C25 bNotForB gnd 0.4fF
+C26 cNotForB gnd 0.4fF
+C27 Vdd gnd 1.4fF

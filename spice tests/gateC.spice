@@ -1,0 +1,34 @@
+* SPICE3 file created from gateC.ext - technology: scmos
+
+.option scale=0.12u
+
+M1000 Vdd cForC a_235_284# Vdd pfet w=10 l=2
++  ad=60 pd=32 as=110 ps=62
+M1001 a_235_284# bForC Vdd Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1002 cGateOut xNotForC a_235_284# Vdd pfet w=10 l=2
++  ad=50 pd=30 as=0 ps=0
+M1003 a_242_240# cForC GND Gnd nfet w=5 l=2
++  ad=30 pd=22 as=50 ps=40
+M1004 cGateOut bForC a_242_240# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1005 GND xNotForC cGateOut Gnd nfet w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 Vdd cGateOut 0.1fF
+C1 Vdd bForC 0.1fF
+C2 cForC xNotForC 0.0fF
+C3 Vdd a_235_284# 0.4fF
+C4 cGateOut a_235_284# 0.2fF
+C5 bForC a_235_284# 0.0fF
+C6 Vdd cForC 0.1fF
+C7 bForC cForC 0.4fF
+C8 cForC a_235_284# 0.1fF
+C9 Vdd xNotForC 0.1fF
+C10 xNotForC cGateOut 0.2fF
+C11 bForC xNotForC 0.5fF
+C12 cGateOut gnd 0.3fF
+C13 a_235_284# gnd 0.0fF
+C14 xNotForC gnd 0.5fF
+C15 bForC gnd 0.5fF
+C16 cForC gnd 0.4fF
+C17 Vdd gnd 1.0fF

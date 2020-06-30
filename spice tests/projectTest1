@@ -1,0 +1,21 @@
+* Project test for sequence 1011
+
+.option scale=0.12u
+
+.include project.spice
+.include tsmc_cmos025
+
+Vcc vdd gnd 1
+Vclk clk gnd PULSE( 0 1 10N 0.1N 0.1N 10N 20N)
+vr reset gnd PWL(0 0 5N 0 5.1N 1) 
+
+vx x gnd PWL(0 0 5N 0 5.1N 1 15N 1 15.1N 0 35N 0 35.1N 1)
+
+.TRAN 1N  100N
+
+*  plot v(clk)+2.4 v(x)+1.2 v(qa)
+
+.OPTIONS TEMP=25 reltol = 1e-6 
+
+.END
+

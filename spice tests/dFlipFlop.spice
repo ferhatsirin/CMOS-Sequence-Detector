@@ -1,0 +1,94 @@
+* SPICE3 file created from dFlipFlop.ext - technology: scmos
+
+.option scale=0.12u
+
+M1000 a_59_119# a_55_106# Vdd Vdd pfet w=10 l=2
++  ad=60 pd=32 as=640 ps=368
+M1001 Vdd a_53_n33# a_59_119# Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1002 a_59_90# a_55_106# GND Gnd nfet w=5 l=2
++  ad=30 pd=22 as=150 ps=120
+M1003 a_59_119# a_53_n33# a_59_90# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1004 a_53_n33# RESET Vdd Vdd pfet w=10 l=2
++  ad=110 pd=62 as=0 ps=0
+M1005 Vdd CLK a_53_n33# Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1006 a_53_n33# a_59_119# Vdd Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 Q a_53_n33# Vdd Vdd pfet w=10 l=2
++  ad=60 pd=32 as=0 ps=0
+M1008 Vdd QNOT Q Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 a_56_19# RESET GND Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1010 a_64_19# CLK a_56_19# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1011 a_53_n33# a_59_119# a_64_19# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1012 a_114_n4# a_53_n33# GND Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1013 Q QNOT a_114_n4# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1014 a_59_n23# a_53_n33# Vdd Vdd pfet w=10 l=2
++  ad=110 pd=62 as=0 ps=0
+M1015 Vdd CLK a_59_n23# Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1016 a_59_n23# a_55_106# Vdd Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1017 QNOT a_59_n23# Vdd Vdd pfet w=10 l=2
++  ad=110 pd=62 as=0 ps=0
+M1018 Vdd RESET QNOT Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1019 QNOT Q Vdd Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1020 a_59_n55# a_53_n33# GND Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1021 a_67_n55# CLK a_59_n55# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1022 a_59_n23# a_55_106# a_67_n55# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1023 a_112_n75# a_59_n23# GND Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1024 a_120_n75# RESET a_112_n75# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1025 QNOT Q a_120_n75# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1026 a_55_106# D Vdd Vdd pfet w=10 l=2
++  ad=110 pd=62 as=0 ps=0
+M1027 Vdd RESET a_55_106# Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1028 a_55_106# a_59_n23# Vdd Vdd pfet w=10 l=2
++  ad=0 pd=0 as=0 ps=0
+M1029 a_57_n126# D GND Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1030 a_65_n126# RESET a_57_n126# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1031 a_55_106# a_59_n23# a_65_n126# Gnd nfet w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+C0 RESET Q 0.8fF
+C1 a_53_n33# Vdd 1.7fF
+C2 a_59_n23# Vdd 0.7fF
+C3 a_53_n33# a_59_119# 1.9fF
+C4 QNOT Q 0.8fF
+C5 a_53_n33# a_55_106# 0.4fF
+C6 a_59_119# Vdd 0.4fF
+C7 a_59_n23# a_55_106# 0.7fF
+C8 Vdd a_55_106# 1.2fF
+C9 RESET a_59_n23# 2.7fF
+C10 RESET Vdd 0.3fF
+C11 RESET a_59_119# 0.0fF
+C12 RESET a_55_106# 1.2fF
+C13 QNOT a_53_n33# 0.4fF
+C14 QNOT Vdd 1.1fF
+C15 Q a_59_n23# 0.0fF
+C16 Q Vdd 0.4fF
+C17 RESET QNOT 0.0fF
+C18 a_59_n23# gnd 2.2fF
+C19 Q gnd 1.8fF
+C20 QNOT gnd 1.4fF
+C21 RESET gnd 3.5fF
+C22 a_59_119# gnd 2.2fF
+C23 a_53_n33# gnd 3.5fF
+C24 a_55_106# gnd 4.2fF
+C25 Vdd gnd 6.1fF
